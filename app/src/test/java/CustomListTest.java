@@ -10,18 +10,18 @@ import java.util.ArrayList;
 
 public class CustomListTest {
 
-    static CustomList list;
+    private CustomList listy;
 
     @Before
     public void setup(){
-        list = new CustomList(null, new ArrayList<City>());
+        listy = new CustomList(null, new ArrayList<City>());
     }
 
     @Test
     public void addCityTest(){
         City c = new City("Edmonton","AB");
-        int size = list.getCount();
-        list.addCity(c);
-        assertEquals(size+1, list.getCount());
+        int size = listy.getCount();
+        listy.addCity(c);
+        assertEquals(size+1, listy.getCount());
     }
 }
