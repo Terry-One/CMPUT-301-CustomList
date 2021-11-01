@@ -4,24 +4,24 @@ import com.example.simpleparadox.listycity.City;
 import com.example.simpleparadox.listycity.CustomList;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
 public class CustomListTest {
 
-    private CustomList listy;
+    public CustomList list;
 
     @Before
     public void setup(){
-        listy = new CustomList(null, new ArrayList<City>());
+        list = new CustomList(null, new ArrayList<City>());
     }
 
     @Test
     public void addCityTest(){
         City c = new City("Edmonton","AB");
-        int size = listy.getCount();
-        listy.addCity(c);
-        assertEquals(size+1, listy.getCount());
+        int size = list.getCount();
+        list.addCity(c);
+        assertEquals(size+1, list.getCount());
     }
 }
